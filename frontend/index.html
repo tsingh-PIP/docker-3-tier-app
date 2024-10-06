@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Tier App Frontend</title>
+</head>
+<body>
+    <h1>Welcome to the Frontend!</h1>
+    <p>This is a simple frontend connected to a backend and database.</p>
+    
+    <div id="backend-result">
+        Loading backend data...
+    </div>
+
+    <script>
+        // Make an API call to the backend
+        fetch('http://backend:5000/')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('backend-result').innerText = data;
+            })
+            .catch(error => {
+                document.getElementById('backend-result').innerText = error;
+                console.error('Error:', error);
+            });
+    </script>
+</body>
+</html>
