@@ -1,7 +1,10 @@
+const cors = require('cors');
 const express = require('express');
 const mysql = require('mysql2');
 const app = express();
 const port = 5000;
+
+app.use(cors({ origin: 'http://frontend:8080' })); // Replace with your frontend's URL
 
 // MySQL connection
 const db = mysql.createConnection({
@@ -10,6 +13,7 @@ const db = mysql.createConnection({
   password: 'password',
   database: 'mydb'
 });
+
 
 // Check backend-database connection
 app.get('/', (req, res) => {

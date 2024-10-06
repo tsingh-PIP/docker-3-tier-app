@@ -8,7 +8,9 @@
     },
     "dependencies": {
         "backend": "file:",
+        "cors": "2.8.5",
         "express": "^4.17.1",
-        "mysql2": "^2.3.3"
+        "mysql2": "^2.3.3",
+        "vary": "1.1.2"
     }
 }

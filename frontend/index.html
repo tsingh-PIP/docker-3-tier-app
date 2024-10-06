@@ -21,7 +21,7 @@
                 document.getElementById('backend-result').innerText = data;
             })
             .catch(error => {
-                document.getElementById('backend-result').innerText = error;
+                document.getElementById('backend-result').innerText = 'Error connecting to backend:';
                 console.error('Error:', error);
             });
     </script>
